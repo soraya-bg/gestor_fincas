@@ -1,0 +1,33 @@
+<p class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: darkseagreen;">
+  LISTA DE GANADO
+</p>
+
+  <div class="container">
+<button class="btn btn-info" (click)="addnewganado()">Añadir</button>
+    <table class="table table-hover text-center">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">ID Ganado</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Genero</th>
+          <th scope="col">Nacimiento</th>
+          <th scope="col">Baja</th>
+          <th scope="col">Grupo</th>
+          <th scope="col">Id explotation</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let animal of ganado">
+            <td>{{animal.idganado}}</td>
+            <td>{{animal.type}}</td>
+            <td>{{animal.gender}}</td>
+            <td>{{animal.birth}}</td>
+            <td>{{animal.death}}</td>
+            <td>{{animal.group}}</td>
+            <td>{{animal.idexplotation}}</td>
+            <td> <a href="editganado/{{animal.idganado}}" class="btn btn-success">Editar</a>  |  <button (click)="deleteganado(animal)" class="btn btn-info">Eliminar</button></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>

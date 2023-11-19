@@ -1,0 +1,37 @@
+<p class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: darkseagreen;">
+    EDITAR FINCA
+</p>
+
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6 col-md-offset-3">
+        <div class="jumbotron">
+            <form [formGroup]="addForm" novalidate class="form">  
+
+                <input type="hidden" class="form-control" name="idfinca" formControlName="idfinca">
+
+                <div class="form-group">
+                    <label for="state">Estado</label>
+                    <select name="state" formControlName="state" class="form-control input-sm">
+                        <option value="Alquilado">Alquilado</option>
+                        <option value="En alquiler">En alquiler</option>
+                        <option value="Comprado">Comprado</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="use">Usada por</label>
+                    <input class="form-control" type="text" name="use" formControlName="use">
+                </div>
+
+                <input type="hidden" class="form-control" name="idexplotation" formControlName="idexplotation">
+
+                <button class="btn btn-success" (click)="cancel()">Cancelar</button>&nbsp;
+                <button class="btn btn-success"   (click)="onEdit(addForm)">Editar Finca</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>

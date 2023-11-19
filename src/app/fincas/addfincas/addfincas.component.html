@@ -1,0 +1,36 @@
+<p class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: darkseagreen;">
+    AÑADIR FINCA
+</p>
+
+<div class="row">
+<div class="col-md-3">
+</div>
+<div class="col-md-6 col-md-offset-3">
+<div class="jumbotron">
+<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+<div class="form-group">
+<label for="idfinca">Id Finca</label>
+<input type="number" name="idfinca" formControlName="idfinca" autocomplete="off" class="form-control input-sm" >
+</div>
+<div class="form-group">
+<label for="state">Estado</label>
+<select name="state" formControlName="state" class="form-control input-sm">
+    <option value="Alquilado">Alquilado</option>
+    <option value="En alquiler">En alquiler</option>
+    <option value="Comprado">Comprado</option>
+</select>
+</div>
+<div class="form-group">
+<label for="use">Usado por</label>
+<input type="text" name="use" formControlName="use" autocomplete="off" class="form-control input-sm" >
+</div>
+<button class="btn btn-success" (click)="cancel()">Cancelar</button>&nbsp;
+<button type="submit" class="btn btn-success" >Añadir</button>
+</form>
+</div>
+</div>
+<div class="col-md-3">
+</div>
+</div>
+
+ 

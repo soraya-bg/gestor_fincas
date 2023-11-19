@@ -1,0 +1,31 @@
+<p class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: darkseagreen;">
+  LISTA DE FINCAS
+</p>
+
+
+
+  <div class="container">
+<button class="btn btn-info" (click)="addnewfinca()">Añadir</button>
+    <table class="table table-hover text-center">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">ID Finca</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Usado por</th>
+          <th scope="col">Id explotacion</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let finca of fincas">
+            <td>{{finca.idfinca}}</td>
+            <td>{{finca.state}}</td>
+            <td>{{finca.use}}</td>
+            <td>{{finca.idexplotation}}</td>
+            <td> <a href="editfincas/{{finca.idfinca}}" class="btn btn-success">Editar</a>  |  <button (click)="deletefinca(finca)" class="btn btn-info">Eliminar</button></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+

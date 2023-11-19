@@ -1,38 +1,49 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdministradorComponent } from './administrador/administrador.component';
-import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { LoginComponent } from './login/login.component';
-import { CreartrabajadorComponent } from './administrador/creartrabajador/creartrabajador.component';
-import { FincasComponent } from './administrador/fincas/fincas.component';
-import { AdminFincasComponent } from './administrador/admin-fincas/admin-fincas.component';
-import { AdminGanadoComponent } from './administrador/admin-ganado/admin-ganado.component';
-import { UserFincasComponent } from './trabajador/user-fincas/user-fincas.component';
-import { UserGanadoComponent } from './trabajador/user-ganado/user-ganado.component';
-import { AdminCreateuserComponent } from './administrador/admin-createuser/admin-createuser.component';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ApiService } from './api.service';
+import { RegisterComponent } from './register/register.component';
+import {FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ListfincasComponent } from './fincas/listfincas/listfincas.component';
+import { AddfincasComponent } from './fincas/addfincas/addfincas.component';
+import { EditfincasComponent } from './fincas/editfincas/editfincas.component';
+import { ListganadoComponent } from './ganado/listganado/listganado.component';
+import { AddganadoComponent } from './ganado/addganado/addganado.component';
+import { EditganadoComponent } from './ganado/editganado/editganado.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdministradorComponent,
-    TrabajadorComponent,
     LoginComponent,
-    CreartrabajadorComponent,
-    FincasComponent,
-    AdminFincasComponent,
-    AdminGanadoComponent,
-    UserFincasComponent,
-    UserGanadoComponent,
-    AdminCreateuserComponent
+    HomeComponent,
+    PagenotfoundComponent,
+    RegisterComponent,
+    ListfincasComponent,
+    AddfincasComponent,
+    EditfincasComponent,
+    ListganadoComponent,
+    AddganadoComponent,
+    EditganadoComponent
   ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    ApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
